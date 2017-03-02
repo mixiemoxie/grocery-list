@@ -7,9 +7,21 @@ $(function(){
     console.log(groceryList);
   });
   $("button#generate").click(function(){
+    $("#input-area").hide();
     groceryList.sort();
     groceryList.forEach(function(listItem){
       $("#grocery-list").append("<li>" + listItem + "</li>");
     });
+    $("#output-area").show();
   });
+  $("button#resetList").click(function(){
+    $("#output-area").hide();
+    $("#input-area").show();
+    groceryList.forEach(function(){
+      $("#grocery-list li").closest('li').remove();
+    });
+    groceryList = [];
+
+    console.log(groceryList);
+    });
 });
