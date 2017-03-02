@@ -12,5 +12,4 @@ $(function(){
       $("#grocery-list").append("<li>" + listItem + "</li>");
     });
   });
-
 });
